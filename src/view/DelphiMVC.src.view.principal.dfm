@@ -11,4 +11,13 @@ object frmPrincipal: TfrmPrincipal
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
+  object Button1: TButton
+    Left = 432
+    Top = 344
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
 end
