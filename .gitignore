@@ -1,0 +1,38 @@
+# Arquivos de backup
+*.bak
+
+# Arquivos de compilação
+*.exe
+*.dll
+*.bpl
+*.dcp
+*.dproj.local
+*.identcache
+__history
+
+# Arquivos temporários
+*.~*
+
+# Arquivos de log
+*.local
+*.bpl.local
+*.log
+
+# Arquivos de configuração do Delphi
+*.dsk
+*.dproj
+*.cfg
+*.dof
+*.drc
+*.dres
+*.identcache
+*.local
+*.stat
+*.map
+*.tvsconfig
+*.tvsconfig.local
+*.tvslocal
+*.user
+*.vsmacros
+
+Win32/
