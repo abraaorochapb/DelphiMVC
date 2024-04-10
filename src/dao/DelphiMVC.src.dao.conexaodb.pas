@@ -22,8 +22,7 @@ type
   end;
 
 const
-  DB_PATH: String = 'DelphiMVC/db/';
-  DB_FILENAME: String = 'OOPDB.FB';
+  DB_PATH: String = 'C:\DelphiMVC\db\OOPDB.FDB';
 
 implementation
 
@@ -47,7 +46,7 @@ end;
 procedure TConexaodb.configConn;
 begin
   FConn.Params.DriverID := 'FB';
-  FConn.Params.Database := ExtractFilePath(ParamStr(0)) + DB_PATH + DB_FILENAME;
+  FConn.Params.Database := DB_PATH;
   FConn.Params.Username := 'SYSDBA';
   FConn.Params.Password := 'masterkey';
   FConn.LoginPrompt := False;
