@@ -56,8 +56,20 @@ end;
 procedure TfrmPrincipal.carregarCliente;
 var
   lControllerCliente: TClienteController;
+  lQry : TFDQuery;
 begin
   lControllerCliente := TClienteController.Create;
+  try
+    lQry := lControllerCliente.getClientes;
+    try
+      lQry.FetchAll;
+      FDMemTable1.Data := lQry.Data;
+    finally
+      FreeAndNil(lQry);
+    end;
+  finally
+    lControllerCliente.Destroy;
+  end;
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
@@ -66,10 +78,12 @@ begin
   TAppController.getInstance();
   TAppController.getInstance().carregarEmpresa(3);
 
-  StatusBar1.Panels[0].Text := 'Vers„o: 1.0';
+  StatusBar1.Panels[0].Text := 'Vers√£o: 1.0';
   StatusBar1.Panels[1].Text := 'Empresa: ' + TAppController.getInstance()
     .mdlEmpresa.id.ToString + ' - ' + TAppController.getInstance()
     .mdlEmpresa.nome_empresa;
+
+  self.carregarCliente;
 end;
 
 procedure TfrmPrincipal.FormDestroy(Sender: TObject);

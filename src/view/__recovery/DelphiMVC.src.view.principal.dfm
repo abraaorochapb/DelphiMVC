@@ -23,11 +23,10 @@ object frmPrincipal: TfrmPrincipal
     ExplicitWidth = 1011
     ExplicitHeight = 764
     object DBGrid1: TDBGrid
-      Left = 1
-      Top = 26
-      Width = 1013
-      Height = 702
-      Align = alClient
+      Left = 280
+      Top = 216
+      Width = 505
+      Height = 265
       DataSource = DataSource1
       GradientEndColor = clYellow
       GradientStartColor = clFuchsia
@@ -69,7 +68,7 @@ object frmPrincipal: TfrmPrincipal
       Left = 1
       Top = 1
       Width = 1013
-      Height = 25
+      Height = 27
       UseSystemFont = False
       ActionManager = ActionManager1
       Caption = 'ActionMainMenuBar1'
@@ -85,6 +84,7 @@ object frmPrincipal: TfrmPrincipal
       Font.Name = 'Segoe UI'
       Font.Style = []
       Spacing = 0
+      ExplicitHeight = 25
     end
   end
   object ActionManager1: TActionManager
